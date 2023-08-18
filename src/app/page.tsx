@@ -9,7 +9,7 @@ export default function Home() {
       {posts.map((post) => {
         return (
           <li
-            className="border border-fuchsia-500 mb-6 p-8 shadow-outline"
+            className="border border-fuchsia-500 mb-6 p-8 shadow-outline shadow-fuchsia-500"
             key={post.slug}
           >
             <Link

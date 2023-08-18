@@ -16,7 +16,7 @@ export default function BlogPost({ params }: BlogPostParams) {
 
   return (
     <>
-      <h1 className="text-3xl mb-8">{post.title}</h1>
+      <h1 className="text-3xl mb-8 underline">{post.title}</h1>
       <p className="text-justify">{post.content}</p>
     </>
   );
