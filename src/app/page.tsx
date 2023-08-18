@@ -1,32 +1,31 @@
-import Image from "next/image";
 import Link from "next/link";
-import maldives from "@/../public/maldives.jpeg";
 import { getPosts } from "@/lib/posts";
-
-
-
 
 export default function Home() {
   const posts = getPosts();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>
-      <h2>My Posts</h2>
-      <Image src={maldives} alt="travel" placeholder="blur" height={400} width={400}/>
-      <ul>
-        {posts.map((post) => {
-          return (
-            <li key={post.slug}>
-              <Link href={`${post.slug}`}>{post.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  
-
-
+    <main className="flex justify-center">
+      <div className="max-w-lg grow">
+        <ul>
+          {posts.map((post) => {
+            return (
+              <li
+                className="border border-fuchsia-500 mb-6 p-8 shadow-outline"
+                key={post.slug}
+              >
+                <Link
+                  className="block mb-4 hover:underline hover:decoration-dotted underline-offset-[12px]"
+                  href={post.slug}
+                >
+                  <h2 className="text-xl">{post.title}</h2>
+                </Link>
+                <div>{post.content.slice(0, 199) + "..."}</div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </main>
   );
 }
