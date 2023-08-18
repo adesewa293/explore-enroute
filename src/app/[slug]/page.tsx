@@ -15,11 +15,9 @@ export default function BlogPost({ params }: BlogPostParams) {
   }
 
   return (
-    <main className="flex justify-center">
-      <div className="max-w-2xl grow">
-        <h1 className="text-3xl mb-8">{post.title}</h1>
-        <p>{post.content}</p>
-      </div>
-    </main>
+    <>
+      <h1 className="text-3xl mb-8">{post.title}</h1>
+      <p className="text-justify">{post.content}</p>
+    </>
   );
 }
