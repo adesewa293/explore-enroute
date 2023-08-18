@@ -5,7 +5,7 @@ export default function ContactPage() {
         Contact me
       </h2>
       <p>
-        If you'd like to get in touch, feel free to connect with me through the
+        If you&rsquo;d like to get in touch, feel free to connect with me through the
         following channels:
       </p>
 
