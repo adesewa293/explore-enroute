@@ -1,6 +1,7 @@
 import { getPostBySlug } from "@/lib/posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { kv } from "@vercel/kv"
 
 type BlogPostParams = {
   params: {
@@ -8,16 +9,19 @@ type BlogPostParams = {
   };
 };
 
-export default function BlogPost({ params }: BlogPostParams) {
+export default async function BlogPost({ params }: BlogPostParams) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
     notFound();
   }
 
+  const pageViews = await kv.incr(`${post.slug}:mypageviews`);
+
   return (
     <>
-      <h1 className="text-3xl mb-8 underline">{post.title}</h1>
+      <h1 className="text-3xl mb-4 underline">{post.title}</h1>
+      <p className="mb-8">Views: {pageViews}</p>
       <p className="text-justify mb-4">{post.content}</p>
       <div className="mb-4">
         <h2 className="text-xl font-semibold mb-2">Budget:</h2>
