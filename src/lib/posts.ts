@@ -10,6 +10,7 @@ const POSTS = [
     My journey through Barcelona was a tapestry of experiences – from its historic heart to its artistic soul, from quaint alleys to architectural marvels. This captivating city left an indelible mark on my traveler's heart, igniting a desire to return and unravel more of its enchanting secrets.
     `,
     budget: 2100,
+    category: 'cultural',
     touristAttractions: ["Gothic Quarter (Barri Gòtic)", "Sagrada Familia", "La Rambla"]
   },
   {
@@ -24,6 +25,7 @@ const POSTS = [
     As I bid adieu to the City of Lights, I carried with me the echoes of its melodies, the beauty of its architecture, and the warmth of its people. Paris, with its timeless elegance and modern verve, proved to be an adventure of a lifetime that will forever shine in my memories.
     `,
     budget: 1000,
+    category: 'romantic',
     touristAttractions: ["Eiffel Tower", "Louvre Museum", "Champs-Elysées"]
   },
   {
@@ -38,6 +40,7 @@ const POSTS = [
     Each adventure was a lesson in adaptability, humility, and the delicate balance of life. These wild landscapes whispered secrets of the past, present, and future, reminding me of the responsibility to preserve their splendor for generations to come. My time in the wilderness was a reminder that in the heart of nature's untamed realms, the true essence of life's beauty and simplicity is revealed.
     `,
     budget: 1500,
+    category: 'adventure',
     touristAttractions: ["National Parks", "Mountain Ranges", "Camping Sites"]
   },
   {
@@ -52,6 +55,7 @@ const POSTS = [
     The beach paradise getaway wasn't just about the natural beauty; it was an escape from the hustle and bustle of everyday life. It was a time to rejuvenate, a time to connect with the elements, and a time to appreciate the awe-inspiring simplicity of nature's creations. Each grain of sand, every wave's kiss, and the sun's warm embrace were constant reminders of the beauty that exists in the world and the peacefulness that resides within.
     `,
     budget: 1200,
+    category: 'vacation',
     touristAttractions: ["Palm Beach", "Coral Bay", "Sunset Cove"]
   },
   {
@@ -67,6 +71,7 @@ const POSTS = [
     These ancient ruins weren't just remnants of the past; they were gateways to understanding the roots of human civilization. As I traced the footsteps of those who lived centuries ago, I felt a profound connection to the shared history of humanity and a sense of humility in the face of time's passage. Each stone and artifact spoke volumes about the achievements, beliefs, and aspirations of those who came before us, reminding us that even in ruins, their legacy lives on.
     `,
     budget: 1300,
+    category: 'historical',
     touristAttractions: ["Machu Picchu", "Pyramids of Giza", "Roman Colosseum"]
   },
   {
@@ -83,6 +88,7 @@ const POSTS = [
     A culinary expedition wasn't just about eating; it was about connecting with people, traditions, and the soul of a destination. As I indulged in the symphony of flavors, I discovered that food was a universal language that brought strangers together and told tales of history and heritage. Every meal was an adventure, an exploration, and an invitation to experience the world through the most delightful of senses.
     `,
     budget: 800,
+    category: 'cultural',
     touristAttractions: ["Street Food Markets", "Michelin Star Restaurants", "Cooking Workshops"]
   }
 ];
