@@ -1,10 +1,13 @@
 import Header from "../components/Header";
 import type { Metadata } from "next";
 import Footer from "../components/Footer";
-import { Inter } from "next/font/google";
+import { DM_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const dm_mono = DM_Mono({
+  subsets: ["latin"],
+  weight: ['300', '400', '500'],
+});
 
 export const metadata: Metadata = {
   title: "Explore enroute",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} mx-6`}>
+      <body className={`${dm_mono.className} mx-6`}>
         <Header />
         <main className="flex justify-center">
           <div className="max-w-lg grow">{children}</div>
