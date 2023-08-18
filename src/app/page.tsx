@@ -24,6 +24,11 @@ export default async function Home() {
                 <h2 className="text-xl">{post.title}</h2>
               </Link>
               <div>{post.content.slice(0, 199) + "..."}</div>
+              <div className="mt-4 text-sm underline decoration-dotted">
+                <Link className="text-fuchsia-300" href={`#${post.category}`}>
+                  #{post.category}
+                </Link>
+              </div>
             </li>
           );
         })}
