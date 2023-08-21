@@ -40,6 +40,19 @@ export default async function BlogPost({ params }: BlogPostParams) {
           #{post.category}
         </Link>
       </div>
+      <form action={`/api/comments`} method="POST">
+        <label htmlFor="username">Name</label>
+        <br />
+        <input name="username" />
+        <br />
+        <br />
+        <label htmlFor="comment">Comment</label>
+        <br />
+        <textarea name="comment" cols={30} rows={10} />
+        <br />
+        <br />
+        <button type="submit">Send Comment</button>
+      </form>
     </>
   );
 }
